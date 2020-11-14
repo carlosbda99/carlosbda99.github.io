@@ -136,15 +136,30 @@ body {
         background: rgb(2,0,36);
         background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 32%, rgba(2,0,36,1) 100%); 
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         color: white;
         height: 15%;
     }
 
-    .footer a {
+    .footer a{
+        display: inline-flex;
+        text-align: center;
+        align-items: center;
         text-decoration: none;
         color: white;
+        width: 24px;
+        height: 25px;
+        margin: 0 24px 0;
+        border-radius: 25px;
+        text-align: center;
+        overflow: hidden;
+        transition: all .5s ease-out;
+    }
+
+    .footer a:hover {
+        width: 120px;
+
     }
 
     .footer a i{
