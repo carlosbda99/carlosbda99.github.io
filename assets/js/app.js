@@ -7,14 +7,14 @@ var app = new Vue({
         img: 'assets/img/henrique.jpeg',
         cursos: [
             {descr: "Binário Cloud",img:"assets/img/binario-cloud.png"},
-            {descr: "Docker", img:"assets/img/binario-cloud.png"},
-            {descr: "LGPD na prática ", img:"assets/img/binario-cloud.png"},
-            {descr: "LGPD", img:"assets/img/binario-cloud.png"},
-            {descr: "Mikrotik", img:"assets/img/binario-cloud.png"},
-            {descr: "OSPF Avançado", img:"assets/img/binario-cloud.png"},
-            {descr: "ISO 20000 Foundation", img:"assets/img/binario-cloud.png"},
-            {descr: "SBRC 2018", img:"assets/img/binario-cloud.png"},
-            {descr: "IX Telecom", img:"assets/img/binario-cloud.png"}
+            {descr: "Docker", img:"assets/img/docker.png"},
+            {descr: "LGPD na prática ", img:"assets/img/lgpd-na-pratica.png"},
+            {descr: "LGPD", img:"assets/img/lgpd.png"},
+            {descr: "Mikrotik", img:"assets/img/mikrotik-básico.png"},
+            {descr: "OSPF Avançado", img:"assets/img/ospf.png"},
+            {descr: "ISO 20000 Foundation", img:"assets/img/iso.png"},
+            {descr: "SBRC 2018", img:"assets/img/sbrc.png"},
+            {descr: "IX Telecom", img:"assets/img/ix-telecom.png"}
         ]
     },
     methods: {
