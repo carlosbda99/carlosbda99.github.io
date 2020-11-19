@@ -2,7 +2,6 @@ var app = new Vue({
     el: '#app',
     data: {
         nomeCompleto: "Carlos Henrique B Azevedo",
-        cursoBtn: false,
         modalSeen: false,
         img: 'assets/img/henrique.jpeg',
         cursos: [
@@ -18,15 +17,11 @@ var app = new Vue({
         ]
     },
     methods: {
-        cursosSeen: function(){
-            this.cursoBtn = !this.cursoBtn
-        },
         showModal: function(a){
             this.modalSeen = !this.modalSeen
             this.img = a
         },
         closeModal: function(a=''){
-            this.cursosSeen()
             this.modalSeen = !this.modalSeen
         }
     }

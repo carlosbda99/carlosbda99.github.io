@@ -22,12 +22,10 @@
                 <ul>
                     <li>
                         <div class="dropdownBtn">
-                            <a @click="cursosSeen" href="#">Certificados</a>
-                            <transition name=fade>
-                                <div v-if="cursoBtn" class="dropdownContent">
-                                    <a v-for="curso in cursos" :key="curso.descr" @click="showModal(curso.img)" href="#">{{ curso.descr }}</a>
-                                </div>
-                            </transition>
+                            <a href="#">Certificados</a>
+                            <div class="dropdownContent">
+                                <a v-for="curso in cursos" :key="curso.descr" @click="showModal(curso.img)" href="#">{{ curso.descr }}</a>
+                            </div>
                         </div>
                     </li>
                     <li><a href="#">Sobre</a></li>
@@ -37,7 +35,32 @@
         </div>
 
         <div class="about">
-            <h1>Em desenvolvimento</h1>
+            <div class="side">
+                <img class="demonstrative" src="assets/img/henrique2.png" alt="">
+            </div>
+            <div class="main">
+                <h1>Lore Ipsum</h1>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nunc quam lacus, ultrices sit amet rhoncus ac, scelerisque nec nisi.
+                        Nam condimentum arcu eget porta dapibus. Integer consequat lacus sed est sagittis, 
+                        in efficitur enim facilisis. In lobortis interdum nisi, a mattis tellus ultricies in. 
+                        Aliquam dignissim nisl eu tortor vulputate, eget congue nulla aliquam. Nam at velit 
+                        viverra, auctor nisl at, volutpat metus. Lorem ipsum dolor sit amet, consectetur 
+                        adipiscing elit. Duis consectetur urna in euismod pretium.
+                    </p>
+                    <p>
+                        Vestibulum ullamcorper dictum placerat. Aliquam erat volutpat. Morbi semper auctor erat 
+                        at consequat. Nulla cursus eu felis et viverra. Nulla in erat interdum, blandit nisi vel, 
+                        aliquam nunc. Quisque dui lectus, imperdiet ut ullamcorper rutrum, condimentum a sapien. 
+                        Nunc pharetra, nibh in sodales tincidunt, magna neque pharetra odio, in finibus dui ante vitae 
+                        tellus. Sed condimentum feugiat massa sed volutpat. In blandit purus nunc, a finibus dui mollis 
+                        id. Donec scelerisque sed lectus vestibulum luctus. Proin congue tincidunt feugiat. Etiam ut imperdiet 
+                        massa. Quisque auctor consequat enim, sit amet tincidunt elit iaculis ac. Aenean vitae nisi lectus.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <div class="footer">
