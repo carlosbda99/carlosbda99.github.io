@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         nomeCompleto: "Carlos Henrique B Azevedo",
         modalSeen: false,
+        isActive: false,
         img: 'assets/img/henrique.jpeg',
         cursos: [
             {descr: "Binário Cloud",img:"assets/img/binario-cloud.png"},
@@ -23,6 +24,12 @@ var app = new Vue({
         },
         closeModal: function(a=''){
             this.modalSeen = !this.modalSeen
+        },
+        activeMenu: function(){
+            this.isActive = true
+        },
+        deactiveMenu: function(){
+            this.isActive = false
         }
     }
 })

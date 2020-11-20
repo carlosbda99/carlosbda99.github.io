@@ -16,12 +16,12 @@
         <div class="nav">
             <div class="navMenu">
                 <a href=""><img src="assets/img/henrique.jpeg" alt="Foto de Carlos Henrique"></a>
-                <p>{{ nomeCompleto }}</p>
+                <p id="nome">{{ nomeCompleto }}</p>
             </div>
             <div class="navMenu">
                 <ul>
                     <li>
-                        <div class="dropdownBtn">
+                        <div class="dropdown">
                             <a href="#">Certificados</a>
                             <div class="dropdownContent">
                                 <a v-for="curso in cursos" :key="curso.descr" @click="showModal(curso.img)" href="#">{{ curso.descr }}</a>
@@ -30,6 +30,7 @@
                     </li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Contato</a></li>
+                    <li><i class="fas fa-bars" @click="activeMenu"></i></li>
                 </ul>
             </div>
         </div>
@@ -75,6 +76,18 @@
                 <div class="contentModal">
                     <img :src="img" alt=""/>
                 </div>
+            </div>
+        </transition>
+
+        <!-- Menu responsivo -->
+        <transition name=fade>
+            <div v-if="isActive" class="responsiveMenu">
+                <div class="contentMenu">
+                    <a href="#">Certificados</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                </div>
+                <i @click="deactiveMenu" class="closeIcon fas fa-times"></i>
             </div>
         </transition>
     </div>
