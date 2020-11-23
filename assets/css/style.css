@@ -3,11 +3,19 @@
 }
 
 body {
+    background-position: center;
+    background-image: url('https://www.agenciaslim.com.br/wp-content/uploads/2018/08/desenvolvimento-web-linguagens.jpg');
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     top: 0;
     left: 0;
     box-sizing: border-box;
+    color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -36,11 +44,6 @@ body {
     height: 80px;
 }
 
-.footer {
-    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 32%, rgba(2,0,36,1) 100%); 
-    justify-content: center;
-}
-
 .nav img {
     height: 50px;
     width: 50px;
@@ -61,7 +64,6 @@ body {
 
 .nav .navMenu ul li {
     margin: 10px;
-    text-decoration: none;
     list-style-type: none;
 }
 
@@ -70,19 +72,23 @@ body {
 }
 
 .nav .navMenu ul li a {
-    text-decoration: none;
     color: white;
     padding: 10px;
 }
+
+.footer {
+    background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 32%, rgba(2,0,36,1) 100%); 
+    justify-content: center;
+}
+
 
 .footer a {
     display: inline-flex;
     text-align: center;
     align-items: center;
-    text-decoration: none;
     color: white;
     width: 24px;
-    height: 25px;
+    height: 55px;
     margin: 0 24px 0;
     border-radius: 25px;
     text-align: center;
@@ -92,6 +98,15 @@ body {
 
 .footer a i {
     margin: 5px;
+}
+
+.side {
+    display: flex;
+    flex: 30%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .main {
@@ -104,7 +119,42 @@ body {
     padding: 15px;
 }
 
-@media  screen and (min-width: 360px) and (max-width: 719px){
+.certificados {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.certificados div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 300px;
+}
+
+.certificados div a {
+    width: 90%;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.certificados div a img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 359px) {
+    .side img {display: none;}
+}
+
+@media  screen and (max-width: 719px){
     #nome {display: none;}
 
     .fas {
@@ -116,9 +166,10 @@ body {
         background-color: white;
     }
 
-    /* .side img {display: none;} */
     .side img {
-        height: 200px;
+        width: 30%;
+        height: auto;
+        align-self: center;
     }
 
     .dropdown {
@@ -129,7 +180,6 @@ body {
     .dropdownContent {
         display: none;
         width: min-content;
-        text-decoration: none;
         flex-direction: column;
         align-content: center;
         position: absolute;
@@ -139,6 +189,11 @@ body {
         z-index: 1;
         font-weight: bold;
         transition: all 0.3s ease-in;
+    }
+
+    .nav {
+        position: fixed;
+        width: 100%;
     }
 
     .navMenu ul li i {
@@ -160,7 +215,11 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 30px;
+        margin: 110px 30px 30px;
+    }
+
+    .certificados {
+        margin-top: 110px;
     }
 
     .responsiveMenu {
@@ -185,7 +244,6 @@ body {
     }
 
     .responsiveMenu .contentMenu a {
-        text-decoration: none;
         font-size: 25px;
         color: white;
         margin: 50px;
@@ -205,6 +263,10 @@ body {
         left: 25px;
         color: white;
     }
+
+    .footer a {width: 35px;}
+
+    .fab, .fas {font-size: 30px;}
 }
 
 @media  screen and (min-width: 720px){
@@ -216,7 +278,6 @@ body {
     .dropdownContent {
         display: none;
         width: min-content;
-        text-decoration: none;
         flex-direction: column;
         align-content: center;
         position: absolute;
@@ -275,15 +336,6 @@ body {
         justify-content: center;
         height: 70vh;
         margin: 0 30px 0 30px;
-    }
-
-    .side {
-        display: flex;
-        flex: 30%;
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
     }
 
     .side img{

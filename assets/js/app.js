@@ -4,6 +4,7 @@ var app = new Vue({
         nomeCompleto: "Carlos Henrique B Azevedo",
         modalSeen: false,
         isActive: false,
+        aboutVue: true,
         img: 'assets/img/henrique.jpeg',
         cursos: [
             {descr: "Binário Cloud",img:"assets/img/binario-cloud.png"},

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-free-5.15.1-web/css/all.css">
+    <title>Carlos Henrique - Certificados</title>
+</head>
+
+<body>
+    <!-- APP Vue -->
+    <div id="app" class="container">
+
+        <!-- Cabeçalho -->
+        <div class="nav">
+            <div class="navMenu">
+                <a href=""><img src="assets/img/henrique.jpeg" alt="Foto de Carlos Henrique"></a>
+                <p id="nome">{{ nomeCompleto }}</p>
+            </div>
+            <div class="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><i class="fas fa-bars" @click="activeMenu"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Corpo de certificados -->
+        <div class="certificados">
+            <div v-for="curso in cursos" :key="curso.descr">
+                <a :href="curso.img"><img :src="curso.img" alt=""></a>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <a href="https://www.linkedin.com/in/carlos-henrique-azevedo/"><i class="fab fa-linkedin"></i>Linkedin</a>
+            <a href="https://github.com/carlosbda99"><i class="fab fa-github"></i>Github</a>
+            <a href="https://api.whatsapp.com/send?phone=5584981878979"><i class="fab fa-whatsapp"></i>Whatsapp</a>
+        </div>
+
+        <!-- Menu responsivo -->
+        <transition name=fade>
+            <div v-if="isActive" class="responsiveMenu">
+                <div class="contentMenu">
+                    <a href="index.html">Home</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Contato</a>
+                </div>
+                <i @click="deactiveMenu" class="closeIcon fas fa-times"></i>
+            </div>
+        </transition>
+
+        <!-- Script Vue -->
+        <script src="assets/js/app.js"></script>
+    </div>
+</body>

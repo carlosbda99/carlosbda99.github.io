@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <div id="app" class="container">
+    <!-- APP Vue -->
+    <div id="app" class="container opac">
+
         <!-- Cabeçalho -->
         <div class="nav">
             <div class="navMenu">
@@ -22,7 +24,7 @@
                 <ul>
                     <li>
                         <div class="dropdown">
-                            <a href="#">Certificados</a>
+                            <a>Certificados</a>
                             <div class="dropdownContent">
                                 <a v-for="curso in cursos" :key="curso.descr" @click="showModal(curso.img)" href="#">{{ curso.descr }}</a>
                             </div>
@@ -35,7 +37,8 @@
             </div>
         </div>
 
-        <div class="about">
+        <!-- Visualização de about -->
+        <div v-if="aboutVue" class="about">
             <div class="side">
                 <img src="assets/img/henrique2.png" alt="">
             </div>
@@ -64,13 +67,14 @@
             </div>
         </div>
 
+        <!-- Rodapé -->
         <div class="footer">
             <a href="https://www.linkedin.com/in/carlos-henrique-azevedo/"><i class="fab fa-linkedin"></i>Linkedin</a>
             <a href="https://github.com/carlosbda99"><i class="fab fa-github"></i>Github</a>
             <a href="https://api.whatsapp.com/send?phone=5584981878979"><i class="fab fa-whatsapp"></i>Whatsapp</a>
         </div>
 
-        <!-- Cursos -->
+        <!-- Modal de cursos no dropdown -->
         <transition name=fade>
             <div v-if="modalSeen" @click="closeModal" class="modal">
                 <div class="contentModal">
@@ -83,7 +87,7 @@
         <transition name=fade>
             <div v-if="isActive" class="responsiveMenu">
                 <div class="contentMenu">
-                    <a href="#">Certificados</a>
+                    <a href="certificados.html">Certificados</a>
                     <a href="#">Sobre</a>
                     <a href="#">Contato</a>
                 </div>
@@ -91,7 +95,9 @@
             </div>
         </transition>
     </div>
+
+    <!-- Script Vue -->
     <script src="assets/js/app.js"></script>
-</body>
+</body> 
 
 </html>
