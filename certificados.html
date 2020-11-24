@@ -17,7 +17,7 @@
         <!-- Cabeçalho -->
         <div class="nav">
             <div class="navMenu">
-                <a href=""><img src="assets/img/henrique.jpeg" alt="Foto de Carlos Henrique"></a>
+                <a href="index.html"><img src="assets/img/henrique.jpeg" alt="Foto de Carlos Henrique"></a>
                 <p id="nome">{{ nomeCompleto }}</p>
             </div>
             <div class="navMenu">
@@ -33,6 +33,7 @@
         <!-- Corpo de certificados -->
         <div class="certificados">
             <div v-for="curso in cursos" :key="curso.descr">
+                <p>{{ curso.descr }}</p>
                 <a :href="curso.img"><img :src="curso.img" alt=""></a>
             </div>
         </div>
@@ -45,12 +46,12 @@
         </div>
 
         <!-- Menu responsivo -->
-        <transition name=fade>
-            <div v-if="isActive" class="responsiveMenu">
+        <transition name="slide">
+            <div v-if="isActive" @click="deactiveMenu" class="responsiveMenu">
                 <div class="contentMenu">
-                    <a href="index.html">Home</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
+                    <div><a href="index.html">Home</a></div>
+                    <div><a href="#">Sobre</a></div>
+                    <div><a href="#">Contato</a></div>
                 </div>
                 <i @click="deactiveMenu" class="closeIcon fas fa-times"></i>
             </div>

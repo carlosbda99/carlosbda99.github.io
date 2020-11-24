@@ -17,7 +17,7 @@
         <!-- Cabeçalho -->
         <div class="nav">
             <div class="navMenu">
-                <a href=""><img src="assets/img/henrique.jpeg" alt="Foto de Carlos Henrique"></a>
+                <a href="index.html"><img src="assets/img/henrique.jpeg" alt="Foto de Carlos Henrique"></a>
                 <p id="nome">{{ nomeCompleto }}</p>
             </div>
             <div class="navMenu">
@@ -43,25 +43,21 @@
                 <img src="assets/img/henrique2.png" alt="">
             </div>
             <div class="main">
-                <h1>Lorem Ipsum</h1>
+                <h1>Perfil profissional</h1>
                 <div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nunc quam lacus, ultrices sit amet rhoncus ac, scelerisque nec nisi.
-                        Nam condimentum arcu eget porta dapibus. Integer consequat lacus sed est sagittis, 
-                        in efficitur enim facilisis. In lobortis interdum nisi, a mattis tellus ultricies in. 
-                        Aliquam dignissim nisl eu tortor vulputate, eget congue nulla aliquam. Nam at velit 
-                        viverra, auctor nisl at, volutpat metus. Lorem ipsum dolor sit amet, consectetur 
-                        adipiscing elit. Duis consectetur urna in euismod pretium.
+                        Profissional na área de tecnologia da informação desde 2018, sou estudante de graduação em Tecnologia 
+                        em Redes de Computadores pelo IFRN e apaixonado por desenvolvimento. Experiência profissional 
+                        com <i>banco de dados relacionais e não relacionais, Docker, gerência e monitoramento de redes, 
+                        administração de servidores Linux e Windows (Active Directory) e implantação de serviços.</i>
+                        também com conhecimento na área de <i>roteamento (OSPF, RIP, BGP)</i>.
                     </p>
                     <p>
-                        Vestibulum ullamcorper dictum placerat. Aliquam erat volutpat. Morbi semper auctor erat 
-                        at consequat. Nulla cursus eu felis et viverra. Nulla in erat interdum, blandit nisi vel, 
-                        aliquam nunc. Quisque dui lectus, imperdiet ut ullamcorper rutrum, condimentum a sapien. 
-                        Nunc pharetra, nibh in sodales tincidunt, magna neque pharetra odio, in finibus dui ante vitae 
-                        tellus. Sed condimentum feugiat massa sed volutpat. In blandit purus nunc, a finibus dui mollis 
-                        id. Donec scelerisque sed lectus vestibulum luctus. Proin congue tincidunt feugiat. Etiam ut imperdiet 
-                        massa. Quisque auctor consequat enim, sit amet tincidunt elit iaculis ac. Aenean vitae nisi lectus.
+                        Com conhecimentos no <i>desenvolvimento web</i> , linguagens de programação<i>C++, Python, PHP
+                        e Javascript; ferramentas de versionamento (git) e frameworks reativos (Vue).</i>
+                        Participei do desenvolvimentos de projetos como o <i><a href="https://latarc.github.io/umbu/">Umbu Framework</a></i>
+                        em parceria com o <i><a href="https://latarc.ifrn.edu.br/">LaTARC</a> - IFRN</i> além de 
+                        outros trabalhos na instituição.
                     </p>
                 </div>
             </div>
@@ -84,12 +80,12 @@
         </transition>
 
         <!-- Menu responsivo -->
-        <transition name=fade>
-            <div v-if="isActive" class="responsiveMenu">
-                <div class="contentMenu">
-                    <a href="certificados.html">Certificados</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
+        <transition name="slide">
+            <div v-if="isActive" @click="deactiveMenu" class="responsiveMenu">
+                <div class="contentMenu" >
+                    <div><a href="certificados.html">Certificados</a></div>
+                    <div><a href="#">Sobre</a></div>
+                    <div><a href="#">Contato</a></div>
                 </div>
                 <i @click="deactiveMenu" class="closeIcon fas fa-times"></i>
             </div>
