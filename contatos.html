@@ -22,6 +22,7 @@
             </div>
             <div class="navMenu">
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li>
                         <div class="dropdown">
                             <a>Certificados</a>
@@ -31,36 +32,27 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="contatos.html">Contato</a></li>
                     <li><i class="fas fa-bars" @click="activeMenu"></i></li>
                 </ul>
             </div>
         </div>
 
-        <!-- Visualização de about -->
-        <div class="about">
-            <div class="side">
-                <img src="assets/img/henrique2.png" alt="">
-            </div>
-            <div class="main">
-                <h1>Perfil profissional</h1>
-                <div>
-                    <p>
-                        Profissional na área de tecnologia da informação desde 2018, sou estudante de graduação em Tecnologia 
-                        em Redes de Computadores pelo IFRN e apaixonado por desenvolvimento. Experiência profissional 
-                        com <i>banco de dados relacionais e não relacionais, Docker, gerência e monitoramento de redes, 
-                        administração de servidores Linux e Windows (Active Directory) e implantação de serviços.</i>
-                        também com conhecimento na área de <i>roteamento (OSPF, RIP, BGP)</i>.
-                    </p>
-                    <p>
-                        Com conhecimentos no <i>desenvolvimento web</i> , linguagens de programação<i>C++, Python, PHP
-                        e Javascript; ferramentas de versionamento (git) e frameworks reativos (Vue).</i>
-                        Participei do desenvolvimentos de projetos como o <i><a href="https://latarc.github.io/umbu/">Umbu Framework</a></i>
-                        em parceria com o <i><a href="https://latarc.ifrn.edu.br/">LaTARC</a> - IFRN</i> além de 
-                        outros trabalhos na instituição.
-                    </p>
-                </div>
-            </div>
+        <!-- Visualização de contatos -->
+        <div class="contacts">
+            <form action="https://mailthis.to/henriqueazevedo" method="POST" encType="multipart/form-data">
+                <h1>Me envia uma mensagem:</h1>
+                <input type="text" name="name" placeholder="Seu nome">
+                <input type="email" name="email" placeholder="seu-email@mail.com">
+                <input type="text" name="phone" placeholder="(55) 5555-5555">
+                <textarea name="message" placeholder="Digite sua mensagem aqui" style="height:120px"></textarea>
+                <input type="file" name="file">
+                <input type="hidden" name="_subject" value="Contato pela homepage">
+                <input type="hidden" name="_after" value="http://www.henriqueazevedo.xyz/">
+                <input type="submit" name="submit" value="Enviar mensagem">
+
+                <!-- Honeypot (to catch comment spam bots) -->
+                <input type="hidden" name="_honeypot" value="">
+            </form>
         </div>
 
         <!-- Rodapé -->
@@ -83,8 +75,8 @@
         <transition name="slide">
             <div v-if="isActive" @click="deactiveMenu" class="responsiveMenu">
                 <div class="contentMenu" >
+                    <div><a href="index.html">Home</a></div>
                     <div><a href="certificados.html">Certificados</a></div>
-                    <div><a href="contatos.html">Contato</a></div>
                 </div>
                 <i @click="deactiveMenu" class="closeIcon fas fa-times"></i>
             </div>
